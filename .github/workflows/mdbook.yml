@@ -26,3 +26,7 @@ jobs:
         uses: jenkey2011/vuepress-deploy@v1.8.1
         env:
           BUILD_SCRIPT: git config --global --add safe.directory "*" && npm install && npm run docs:build
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          TARGET_REPO: cuitpanfei/weixin-websdk-docs
+          TARGET_BRANCH: master
+          BUILD_DIR: docs/.vuepress/dist
